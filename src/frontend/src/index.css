@@ -1,0 +1,189 @@
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque[opsz,wdth,wght].woff2")
+    format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/assets/fonts/Outfit[wght].woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm cream background, deep navy text */
+    --background: 0.975 0.006 80;
+    --foreground: 0.18 0.04 250;
+
+    --card: 0.99 0.003 80;
+    --card-foreground: 0.18 0.04 250;
+
+    --popover: 0.99 0.003 80;
+    --popover-foreground: 0.18 0.04 250;
+
+    /* Deep teal-blue primary */
+    --primary: 0.32 0.11 242;
+    --primary-foreground: 0.99 0 0;
+
+    /* Light teal secondary */
+    --secondary: 0.93 0.04 240;
+    --secondary-foreground: 0.28 0.1 242;
+
+    --muted: 0.94 0.01 240;
+    --muted-foreground: 0.5 0.04 242;
+
+    /* Warm amber/gold accent */
+    --accent: 0.72 0.16 65;
+    --accent-foreground: 0.18 0.04 250;
+
+    --destructive: 0.52 0.2 25;
+    --destructive-foreground: 0.99 0 0;
+
+    --border: 0.88 0.02 240;
+    --input: 0.88 0.02 240;
+    --ring: 0.32 0.11 242;
+
+    --radius: 0.5rem;
+
+    --chart-1: 0.32 0.11 242;
+    --chart-2: 0.72 0.16 65;
+    --chart-3: 0.55 0.13 160;
+    --chart-4: 0.62 0.15 300;
+    --chart-5: 0.58 0.18 25;
+
+    --sidebar: 0.22 0.06 248;
+    --sidebar-foreground: 0.9 0.02 240;
+    --sidebar-primary: 0.72 0.16 65;
+    --sidebar-primary-foreground: 0.18 0.04 250;
+    --sidebar-accent: 0.3 0.08 248;
+    --sidebar-accent-foreground: 0.9 0.02 240;
+    --sidebar-border: 0.3 0.06 248;
+    --sidebar-ring: 0.72 0.16 65;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .hero-mesh {
+    background: radial-gradient(
+        ellipse 80% 60% at 20% 30%,
+        oklch(0.32 0.11 242 / 0.12) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse 60% 50% at 80% 70%,
+        oklch(0.72 0.16 65 / 0.1) 0%,
+        transparent 60%
+      ), oklch(0.975 0.006 80);
+  }
+
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .class-card-gradient-1 {
+    background: linear-gradient(
+      135deg,
+      oklch(0.92 0.08 155),
+      oklch(0.88 0.1 160)
+    );
+  }
+  .class-card-gradient-2 {
+    background: linear-gradient(
+      135deg,
+      oklch(0.9 0.1 195),
+      oklch(0.86 0.12 200)
+    );
+  }
+  .class-card-gradient-3 {
+    background: linear-gradient(
+      135deg,
+      oklch(0.88 0.1 230),
+      oklch(0.84 0.12 235)
+    );
+  }
+  .class-card-gradient-4 {
+    background: linear-gradient(
+      135deg,
+      oklch(0.86 0.08 260),
+      oklch(0.82 0.1 265)
+    );
+  }
+  .class-card-gradient-5 {
+    background: linear-gradient(
+      135deg,
+      oklch(0.84 0.09 280),
+      oklch(0.8 0.11 285)
+    );
+  }
+  .class-card-gradient-6 {
+    background: linear-gradient(
+      135deg,
+      oklch(0.82 0.1 300),
+      oklch(0.78 0.12 305)
+    );
+  }
+  .class-card-gradient-7 {
+    background: linear-gradient(
+      135deg,
+      oklch(0.8 0.1 320),
+      oklch(0.76 0.12 325)
+    );
+  }
+  .class-card-gradient-8 {
+    background: linear-gradient(
+      135deg,
+      oklch(0.78 0.12 25),
+      oklch(0.74 0.14 30)
+    );
+  }
+  .class-card-gradient-9 {
+    background: linear-gradient(
+      135deg,
+      oklch(0.76 0.13 45),
+      oklch(0.72 0.15 50)
+    );
+  }
+  .class-card-gradient-10 {
+    background: linear-gradient(135deg, oklch(0.74 0.13 55), oklch(0.7 0.15 60));
+  }
+  .class-card-gradient-11 {
+    background: linear-gradient(
+      135deg,
+      oklch(0.4 0.12 242),
+      oklch(0.36 0.14 247)
+    );
+  }
+  .class-card-gradient-12 {
+    background: linear-gradient(
+      135deg,
+      oklch(0.32 0.11 242),
+      oklch(0.28 0.13 247)
+    );
+  }
+}
